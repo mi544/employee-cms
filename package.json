@@ -1,0 +1,20 @@
+{
+  "name": "employee-cms",
+  "version": "1.0.0",
+  "description": "A CMS for managing employees at a company.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mi544/employee-cms.git"
+  },
+  "keywords": [],
+  "author": "Maksim Verkhoturov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mi544/employee-cms/issues"
+  },
+  "homepage": "https://github.com/mi544/employee-cms#readme"
+}
