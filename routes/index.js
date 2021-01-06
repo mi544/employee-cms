@@ -1,13 +1,8 @@
 const router = require('express').Router()
-const db = require('../utils/db')
+const api = require('./api')
+const hbs = require('./hbs')
 
-router.get('/', function (req, res) {
-  res.render('home')
-})
-
-router.get('/all', async function (req, res) {
-  const { data, columns } = await db.getAllASC()
-  res.render('employees', { data, columns })
-})
+router.use('/', hbs)
+router.use('/api', api)
 
 module.exports = router
