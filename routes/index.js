@@ -1,20 +1,13 @@
 const router = require('express').Router()
-
-const client = require('../utils/db/client')
+const db = require('../utils/db')
 
 router.get('/', function (req, res) {
   res.render('home')
 })
 
 router.get('/all', async function (req, res) {
-  const result = await client.query(
-    'SELECT * FROM employee_main ORDER BY "Full Name" ASC'
-  )
-  const data = result.rows
-  const columns = Object.keys(result.rows[0])
-  console.log(data)
-
-  res.render('employees', { columns, data })
+  const { data, columns } = await db.getAllASC()
+  res.render('employees', { data, columns })
 })
 
 module.exports = router
