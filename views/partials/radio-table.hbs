@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            {{#each columns}}
+                {{#if (isId this)}}
+                    <th></th>
+                {{/if}}
+                {{#unless (isId this)}}
+                    <th>{{this}}</th>
+                {{/unless}}
+            {{/each}}
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+            <tr>
+                {{#each this}}
+                    {{#if (isId @key)}}
+                        <td><input type="radio" name="{{../../radio-name}}" value="{{this}}" /></td>
+                    {{/if}}
+                    {{#unless (isId @key)}}
+                        <td>{{this}}</td>
+                    {{/unless}}
+                {{/each}}
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
