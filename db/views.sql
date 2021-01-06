@@ -1,4 +1,4 @@
-CREATE VIEW employee_master AS 
+CREATE VIEW employee_main AS 
   SELECT
     CONCAT(e.first_name, ' ', e.last_name) AS "Full Name",
     r.name AS "Role",
