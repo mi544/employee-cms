@@ -1,0 +1,16 @@
+<h1>Add an Employee</h1>
+<form action="/api/employee" method="POST">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" />
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" />
+    <h2>Choose a Role:</h2>
+    {{#each roles}}
+        {{> radio-table radio-name="role"}}
+    {{/each}}
+    <h2>Choose a Manager:</h2>
+    {{#each managers}}
+        {{> radio-table radio-name="manager"}}
+    {{/each}}
+    <button type="submit">Add</button>
+</form>

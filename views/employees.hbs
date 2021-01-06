@@ -1,18 +1,2 @@
-<table>
-    <thead>
-        <tr>
-            {{#each columns}}
-                <th>{{this}}</th>
-            {{/each}}
-        </tr>
-    </thead>
-    <tbody>
-        {{#each data}}
-            <tr>
-                {{#each this}}
-                    <td>{{this}}</td>
-                {{/each}}
-            </tr>
-        {{/each}}
-    </tbody>
-</table>
+<h1>All Employees</h1>
+{{> table }}
